@@ -4,7 +4,7 @@ import FeedbackOptions from './Contakt/FeedbackOptions';
 import Notification from './Contakt/Notification';
 import Section from './Contakt/Section';
 
-class App extends Component {
+export class App extends Component {
 	state = {
 		good: 0,
 		neutral: 0,
@@ -31,7 +31,7 @@ class App extends Component {
 		const total = this.countTotalFeedback();
 		return (
 			<>
-				<div className="w-50 mb-4 p-3 text-white bg-dark rounded-4 mx-auto my-5">
+				<div className="w-50 mb-4 p-3 text-white rounded bg-dark rounded-4 mx-auto my-auto shadow-lg">
 					<Section title={'Please leave feedback'}>
 						<FeedbackOptions
 							handleFeedbackClick={this.handleFeedbackClick}
@@ -56,4 +56,3 @@ class App extends Component {
 		);
 	}
 }
-export default App;
